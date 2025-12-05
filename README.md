@@ -1,4 +1,24 @@
 # scad-parametric-timing-belt-generator
+
+## 🆕 Fork con supporto S3M per RC 
+
+**Questa fork aggiunge il supporto per cinghie S3M (passo 3mm)**, comunemente usate nelle auto radiocomandate e applicazioni meccaniche compatte.
+
+### Cosa c'è di nuovo:
+- ✅ **Profilo S3M** completamente supportato
+- ✅ Parametri ottimizzati per applicazioni RC (72 denti = ~69mm diametro, 90 denti = ~86mm diametro)
+- ✅ Testato con larghezze standard 6mm e 9mm
+
+### Esempio S3M:
+```scad
+// Cinghia S3M con 72 denti, larga 9mm (tipica per RC 1/10)
+belting("loop", "S3M", tooth_count = 72, belting_width = 9);
+```
+
+---
+
+## Progetto Originale
+
 Generates STL or DXF files for a wide variety of timing belts
 
 This is primarily based on https://www.youmagine.com/designs/parametric-timing-belt-generator but adds support for generating a 2d profile you export as a DXF or a 3d STL for directy printing or using in your model.
@@ -17,7 +37,9 @@ This is primarily based on https://www.youmagine.com/designs/parametric-timing-b
 - HTD_5mm 
 - HTD_8mm 
 - 40DP 
-- XL 
+- XL
+- L
+- **S3M** ← 🆕 Nuovo!
 
 ## Printing Styles Supported:
 - straight (straight belt segment)
